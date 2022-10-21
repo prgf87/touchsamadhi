@@ -1,5 +1,7 @@
 import Head from 'next/head';
-import Background from './components/Background.jsx';
+import Footer from './components/Footer.jsx';
+import Gallery from './components/Gallery.jsx';
+import Hero from './components/Hero.jsx';
 
 export default function Home() {
   return (
@@ -12,8 +14,9 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.icon" />
       </Head>
-
-      <Background />
+      <Hero />
+      <Gallery />
+      <Footer />
     </div>
   );
 }
