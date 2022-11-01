@@ -18,9 +18,11 @@ const Footer = () => {
           </Link>
         </button>
       </div>
-      <h1 className="text-white text-sm text-center">
-        Copyright © 2022 T.O.U.C.H. Samadhi
-      </h1>
+      <div className="mx-10">
+        <h1 className="text-white text-sm text-center">
+          Copyright © 2022 T.O.U.C.H. Samadhi
+        </h1>
+      </div>
       <div className="relative bottom-0 right-3 flex">
         <button className="button p-2 cursor-pointer">
           <Link href={'https://beatspace-touchsamadhi.bandcamp.com/'}>

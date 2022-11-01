@@ -35,12 +35,13 @@ export default function Contact() {
             required
             className="border border-black mb-6 p-2"
           />
-          <button
+          <button className="pl-5 pr-5 bg-transparent border-2 border-gray-500 text-gray-500 text-lg transition-colors duration-700 transform hover:bg-gray-500 hover:text-gray-100 focus:border-4 focus:border-gray-300">
+            {/* <button
             className="bg-white border-black"
             type="submit"
             value=""
             name="subscribe"
-          >
+          > */}
             <p>Subscribe</p>
           </button>
         </form>

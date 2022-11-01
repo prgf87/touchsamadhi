@@ -4,8 +4,7 @@
 
 html,
 body {
-  font-family: 'Darker Grotesque', 'Audiowide', 'Julius Sans One', 'Orbitron',
-    sans-serif;
+  font-family: 'Orbitron', sans-serif;
   scroll-behavior: smooth;
   @apply bg-black/90 text-gray-50;
 }
@@ -21,7 +20,7 @@ body {
 }
 
 h1 {
-  @apply p-4;
+  @apply p-2;
 }
 
 p {
@@ -29,5 +28,5 @@ p {
 }
 
 button {
-  @apply text-gray-700 hover:scale-110 hover:text-gray-900 hover:animate-pulse transition-transform;
+  @apply text-gray-700 hover:scale-110 hover:text-gray-900 transition-transform;
 }
