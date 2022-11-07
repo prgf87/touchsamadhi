@@ -1,13 +1,12 @@
 import Head from 'next/head';
-import Footer from './components/Footer.jsx';
 import About from './components/About.jsx';
 import Hero from './components/Hero.jsx';
-import Navbar from './components/Navbar.jsx';
 import Contact from './components/Contact.jsx';
+import Listen from './components/Listen.jsx';
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-full">
       <Head>
         <title>Touch Samadhi</title>
         <meta
@@ -16,11 +15,10 @@ export default function Home() {
         />
         <link rel="icon" href="/tslogo2.png" />
       </Head>
-      <Navbar />
       <Hero />
       <About />
+      <Listen />
       <Contact />
-      <Footer />
     </div>
   );
 }

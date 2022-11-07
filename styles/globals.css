@@ -6,7 +6,7 @@ html,
 body {
   font-family: 'Orbitron', sans-serif;
   scroll-behavior: smooth;
-  @apply bg-black/90 text-gray-50;
+  @apply bg-black/90 text-gray-200;
 }
 
 * {
@@ -15,18 +15,14 @@ body {
   box-sizing: border-box;
 }
 
-.custom-img {
-  background-image: url('../public/images/ts1.jpg');
-}
-
 h1 {
   @apply p-2;
 }
 
 p {
-  @apply p-2;
+  @apply py-2;
 }
 
 button {
-  @apply text-gray-700 hover:scale-110 hover:text-gray-900 transition-transform;
+  @apply text-gray-200 hover:text-gray-600 transition-transform;
 }

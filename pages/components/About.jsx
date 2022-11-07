@@ -4,14 +4,7 @@ import React from 'react';
 const About = () => {
   return (
     <div className="w-full px-2 py-2">
-      <div className="w-full flex justify-center items-center mb-2">
-        <Link href={'https://www.eqfest.com'}>
-          <button className="button px-12 py-2 text-black bg-gray-200/80 border hover:text-white z-[2] hover:scale-110 hover:bg-gray-600/80 text-2xl transition-transform">
-            Equinox
-          </button>
-        </Link>
-      </div>
-      <div className="grid grid-cols-1 max-w-[1200px] text-center mx-auto text-md lg:text-xl p-2">
+      <div className="grid grid-cols-1 max-w-[1200px] text-center mx-auto text-sm p-2">
         <div>
           <p>
             …pioneering a revolutionary understanding of the nature of
@@ -37,10 +30,17 @@ const About = () => {
             Sometimes there was an astonishing loss of weight, or even
             levitation of the body from the ground.
           </p>
-          But these are mere symptoms, and tell us nothing..
+          <p>But these are mere symptoms, and tell us nothing..</p>
           <p>There is only one way to find out what samadhi is like:</p>
           <p>You must have it yourself…</p>
-          <p className="text-lg pt-10">Asheville, North Carolina, U.S.A</p>
+          <div className="w-full flex justify-center items-center mb-4">
+            <Link href={'https://www.eqfest.com'}>
+              <button className="button px-12 py-2 text-black bg-gray-200/80 border hover:text-white z-[2] hover:scale-110 hover:bg-gray-600/80 text-2xl transition-transform">
+                Equinox
+              </button>
+            </Link>
+          </div>
+          <p className="text-2xl pt-2">Asheville, North Carolina, U.S.A</p>
         </div>
       </div>
     </div>
