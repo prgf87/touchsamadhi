@@ -20,9 +20,13 @@ h1 {
 }
 
 p {
-  @apply py-2;
+  @apply py-2 text-[0.8rem];
 }
 
 button {
   @apply text-gray-200 hover:text-gray-600 transition-transform;
+}
+
+input {
+  @apply text-gray-500 border p-2;
 }

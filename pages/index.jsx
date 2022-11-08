@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import About from './components/About.jsx';
-import Hero from './components/Hero.jsx';
-import Contact from './components/Contact.jsx';
-import Listen from './components/Listen.jsx';
+import About from './components/About.js';
+import Contact2 from './components/Contact2.js';
+import Hero from './components/Hero.js';
+import Listen from './components/Listen.js';
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       <Hero />
       <About />
       <Listen />
-      <Contact />
+      <Contact2 />
     </div>
   );
 }

@@ -33,7 +33,7 @@ const About = () => {
           <p>But these are mere symptoms, and tell us nothing..</p>
           <p>There is only one way to find out what samadhi is like:</p>
           <p>You must have it yourself…</p>
-          <div className="w-full flex justify-center items-center mb-4">
+          <div className="w-full flex justify-center items-center my-4">
             <Link href={'https://www.eqfest.com'}>
               <button className="button px-12 py-2 text-black bg-gray-200/80 border hover:text-white z-[2] hover:scale-110 hover:bg-gray-600/80 text-2xl transition-transform">
                 Equinox

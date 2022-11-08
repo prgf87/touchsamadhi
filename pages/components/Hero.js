@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 
 const Hero = () => {
   const slides = [
@@ -41,29 +40,20 @@ const Hero = () => {
 
   return (
     <div className="relative flex justify-center items-top text-center h-screen bg-center body">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 0.8,
-          delay: 0.5,
-          ease: [0, 0.71, 0.2, 1.01],
-        }}
-      >
-        <Image
-          src={slides[current].image}
-          alt="/"
-          layout={'fill'}
-          objectFit={'cover'}
-        />
-      </motion.div>
+      <Image
+        src={slides[current].image}
+        alt="/"
+        layout={'fill'}
+        objectFit={'cover'}
+      />
+
       <div className="absolute top-0 left-0 bottom-0 right-0 bg-black/70 z-[2]" />
       <div className="pt-2 z-[3] opacity-60 h-[5rem]">
         <Image src="/tslogo2.png" alt="logo" width={150} height={150} />
       </div>
       <div className="absolute bottom-14 w-full flex justify-center items-center ">
         <Link href={'https://www.eqfest.com'}>
-          <button className="button px-12 py-2 text-black bg-gray-400/80 border border-gray-500 hover:text-white z-[2] hover:scale-110 hover:bg-gray-600/80 text-2xl">
+          <button className="button px-12 py-2 text-black bg-gray-400/80 border-gray-500 hover:text-white z-[2] hover:scale-110 hover:bg-gray-600/80 text-2xl">
             Equinox
           </button>
         </Link>
