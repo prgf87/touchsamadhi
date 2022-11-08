@@ -6,7 +6,7 @@ export default function Contact2() {
   const subscribeUser = async (e) => {
     e.preventDefault();
 
-    const res = await fetch('/api/subscribe', {
+    const res = await fetch('/api/subscribe2', {
       body: JSON.stringify({
         email: inputRef.current.value,
       }),
