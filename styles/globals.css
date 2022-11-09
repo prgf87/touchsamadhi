@@ -24,7 +24,11 @@ p {
 }
 
 button {
-  @apply text-gray-200 hover:text-gray-600 transition-transform;
+  @apply text-gray-200 hover:text-gray-600 transition-colors duration-700 transform;
+}
+
+button.btn {
+  @apply border border-black/60 bg-gray-400/80 text-gray-900 transition-colors duration-700 transform hover:bg-gray-800 hover:text-gray-300;
 }
 
 input {
