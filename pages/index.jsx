@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import About from './components/About.js';
 import Contact from './components/Contact.js';
-import Contact2 from './components/Contact2.js';
-import Contact3 from './components/Contact3.js';
 import Hero from './components/Hero.js';
 import Listen from './components/Listen.js';
 
@@ -21,8 +19,6 @@ export default function Home() {
       <About />
       <Listen />
       <Contact />
-      <Contact2 />
-      <Contact3 />
     </div>
   );
 }
