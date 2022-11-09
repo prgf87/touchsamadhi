@@ -53,7 +53,7 @@ const Hero = () => {
       </div>
       <div className="absolute bottom-14 w-full flex justify-center items-center ">
         <Link href={'https://www.eqfest.com'}>
-          <button className="button px-12 py-2 text-black bg-gray-400/80 border-gray-500 hover:text-white z-[2] hover:scale-110 hover:bg-gray-600/80 text-2xl">
+          <button className="button btn px-12 py-2 mt-2 text-2xl z-[2]">
             Equinox
           </button>
         </Link>
