@@ -29,7 +29,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="h-[200px] bg-gray-100/70 text-black/70">
+    <div className="h-[200px] w-full bg-gray-100/70 text-black/70">
       <div className="flex justify-center items-center pt-2">
         <h1 className="font-bold text-center text-lg md:text-2xl">
           Sign up to the Newsletter...
@@ -58,7 +58,7 @@ export default function Contact() {
               Subscribe
             </button>
           </div>
-          <div className="pt-2">
+          <div className="pt-2 text-gray-600 text-xl">
             {message
               ? message
               : `We only send emails when we have genuine news.`}

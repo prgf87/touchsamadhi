@@ -51,19 +51,13 @@ const Hero = () => {
       <div className="pt-2 z-[3] opacity-60 h-[5rem]">
         <Image src="/tslogo2.png" alt="logo" width={150} height={150} />
       </div>
-      <div className="absolute bottom-14 w-full flex justify-center items-center ">
+      <div className="absolute bottom-4 w-full flex justify-center items-center ">
         <Link href={'https://www.eqfest.com'}>
           <button className="button btn px-12 py-2 mt-2 text-2xl z-[2]">
             Equinox
           </button>
         </Link>
       </div>
-
-      <p className="absolute bottom-0 text-sm sm:text-xl text-gray-100/70 lg:text-3xl z-10">
-        <u className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-400">
-          Awaken To The Trance Dance Experience
-        </u>
-      </p>
     </div>
   );
 };
