@@ -21,16 +21,12 @@ export default function handler(req, res) {
     const run = async () => {
       const ping = await client.ping.get();
       console.log(ping);
-      const response = await client.lists.setListMember(
-        LIST_ID,
-        'subscriber_hash',
-        {
-          email_address: email,
-          status_if_new: 'pending',
-          status: 'subscribed',
-          skip_merge_validation: true,
-        }
-      );
+      const response = await client.lists.addListMember(LIST_ID, {
+        email_address: email,
+        status_if_new: 'pending',
+        status: 'subscribed',
+        skip_merge_validation: true,
+      });
       console.log(response);
       if (response.status >= 400) {
         return res.status(400).json({

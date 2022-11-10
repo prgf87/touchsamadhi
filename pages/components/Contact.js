@@ -14,7 +14,6 @@ export default function Contact() {
       headers: {
         'Content-Type': 'application/json',
       },
-      method: 'PUT',
     });
 
     const { error } = await res.json();
@@ -46,7 +45,7 @@ export default function Contact() {
             required
             autoCapitalize="off"
             autoCorrect="off"
-            className="border border-black/60 rounded-xl min-w-[280px] md:min-w-[400px] py-2 text-center text-md px-2"
+            className="border border-black/60 rounded-xl w-full md:min-w-[400px] py-2 text-center text-md px-2"
           />
           <div className="flex justify-center items-center">
             <button
@@ -57,6 +56,11 @@ export default function Contact() {
             >
               Subscribe
             </button>
+          </div>
+          <div className="pt-2">
+            {message
+              ? message
+              : `We only send emails when we have genuine news.`}
           </div>
         </form>
       </div>
