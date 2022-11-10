@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import React from 'react';
 import { BsFacebook, BsInstagram, BsYoutube } from 'react-icons/bs';
 import { FaBandcamp } from 'react-icons/fa';

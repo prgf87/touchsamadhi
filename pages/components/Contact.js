@@ -29,9 +29,9 @@ export default function Contact() {
   };
 
   return (
-    <div className="h-[15rem] xs:h-[13rem] sm:h-[11rem] w-full bg-gray-100/70 text-black/70  px-2">
+    <div className="h-[15rem] xs:h-[13rem] sm:h-[11rem] w-full bg-gray-900/30 px-2">
       <div className="flex justify-center items-center">
-        <h1 className="font-bold text-center text-lg md:text-2xl">
+        <h1 className="text-center text-zinc-300 text-lg md:text-2xl">
           Sign up to the Newsletter...
         </h1>
       </div>
@@ -58,7 +58,7 @@ export default function Contact() {
               Subscribe
             </button>
           </div>
-          <div className="pt-2 text-gray-600 md:text-xl text-center">
+          <div className="pt-2 text-zinc-300 text-sm md:text-lg text-center">
             {message
               ? message
               : `We only send emails when we have genuine news.`}
