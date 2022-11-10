@@ -1,8 +1,12 @@
 import Head from 'next/head';
+import Navbar from './components/Navbar.js';
 import About from './components/About.js';
 import Contact from './components/Contact.js';
+import Footer from './components/Footer.js';
 import Hero from './components/Hero.js';
 import Listen from './components/Listen.js';
+import { Suspense } from 'react';
+import LoadingSpinner from './components/LoadingSpinner.js';
 
 export default function Home() {
   return (
@@ -15,11 +19,15 @@ export default function Home() {
         />
         <link rel="icon" href="/tslogo2.png" />
       </Head>
-      <Hero />
-      {/* <Listen /> */}
-      <About />
-      <Listen />
-      <Contact />
+      <Suspense fallback={<LoadingSpinner />}>
+        <Navbar />
+        <Hero />
+        {/* <Listen /> */}
+        <About />
+        <Listen />
+        <Contact />
+        <Footer />
+      </Suspense>
     </div>
   );
 }

@@ -29,7 +29,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="h-[15rem] xs:h-[13rem] sm:h-[11rem] w-full bg-gray-900/30 px-2">
+    <div className="h-[15rem] xs:h-[13rem] sm:h-[11rem] w-full bg-zinc-900/90 px-2">
       <div className="flex justify-center items-center">
         <h1 className="text-center text-zinc-300 text-lg md:text-2xl">
           Sign up to the Newsletter...
