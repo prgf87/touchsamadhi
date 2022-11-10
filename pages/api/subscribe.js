@@ -20,6 +20,7 @@ export default function handler(req, res) {
 
     const run = async () => {
       const update = await client.lists.addListMember(LIST_ID, {
+        email_address: email,
         status: 'pending',
         skip_merge_validation: true,
       });
