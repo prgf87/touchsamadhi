@@ -35,9 +35,6 @@ export default function Contact() {
           Sign up to the Newsletter...
         </h1>
       </div>
-      <div className="text-center text-sm pb-2">
-        {message ? message : `We only send emails when we have genuine news.`}
-      </div>
       <div className="flex justify-center items-center w-full">
         <form onSubmit={subscribe}>
           <input

@@ -26,7 +26,7 @@ export default function handler(req, res) {
         'subscriber_hash',
         {
           email_address: email,
-          status_if_new: 'subscribed',
+          status_if_new: 'pending',
           status: 'subscribed',
           skip_merge_validation: true,
         }
@@ -40,9 +40,10 @@ export default function handler(req, res) {
       }
     };
     run();
-    return res
-      .status(201)
-      .json({ error: 'Email address has been added to the mailing list' });
+    return res.status(201).json({
+      error:
+        'Your email address has been successfully added to the mailing list',
+    });
   } catch (error) {
     return res.status(500).json({ error: error.message || error.toString() });
   }
