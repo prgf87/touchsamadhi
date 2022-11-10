@@ -4,7 +4,7 @@ import React from 'react';
 const About = () => {
   return (
     <div id="about" className="w-full z-[2]">
-      <div className="grid grid-cols-1 max-w-[1200px] text-center mx-auto text-sm p-2">
+      <div className="grid grid-cols-1 w-full text-center mx-auto px-10 text-sm md:text-xl p-2">
         <div>
           <p className="pt-2 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-zinc-200/50">
             <u className="font-bold text-[1.5rem] sm:text-2xl md:text-3xl lg:text-5xl">
