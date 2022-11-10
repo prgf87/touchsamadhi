@@ -6,7 +6,7 @@ const About = () => {
     <div className="w-full px-2 py-2">
       <div className="grid grid-cols-1 max-w-[1200px] text-center mx-auto text-sm p-2">
         <div>
-          <p className="text-sm sm:text-xl text-gray-100/70 lg:text-3xl z-10">
+          <p className="text-sm sm:text-xl text-gray-100/70 lg:text-3xl pt-4">
             <u className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-300">
               Awaken To The Trance Dance Experience
             </u>
