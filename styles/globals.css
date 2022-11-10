@@ -20,7 +20,15 @@ h1 {
 }
 
 p {
-  @apply pt-4 text-[1.1rem];
+  @apply pt-4 pb-2 text-[1.1rem] text-gray-200/80;
+}
+
+img {
+  transition: 0.5s;
+}
+
+#about {
+  @apply bg-black/60;
 }
 
 button {

@@ -4,8 +4,10 @@ import { BsFacebook, BsInstagram, BsYoutube } from 'react-icons/bs';
 import { FaBandcamp } from 'react-icons/fa';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div className="h-[5rem] bg-black/90 w-full flex justify-center items-center mt-4">
+    <div className="h-[5rem] bg-black/90 w-full flex justify-center items-center my-1">
       <div className="relative bottom-0 left-7 flex">
         <a
           href="https://www.facebook.com/touchsamadhi"
@@ -28,7 +30,7 @@ const Footer = () => {
       </div>
       <div className="mx-10">
         <h1 className="text-white text-sm text-center">
-          Copyright © 2022 T.O.U.C.H. Samadhi
+          Copyright © {currentYear} T.O.U.C.H. Samadhi
         </h1>
       </div>
       <div className="relative bottom-0 right-7 flex">
