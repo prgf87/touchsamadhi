@@ -1,4 +1,4 @@
-export const slides = [
+const slides = [
   {
     image: '/images/ts1.jpg',
   },
@@ -18,3 +18,5 @@ export const slides = [
     image: '/images/ts6.jpg',
   },
 ];
+
+export default slides;
