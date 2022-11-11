@@ -1,35 +1,48 @@
 import React, { useRef, useState } from 'react';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 export default function Contact() {
   const inputRef = useRef(null);
   const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(true);
+  const [state, setState] = useState('IDLE');
 
   const subscribe = async (e) => {
     e.preventDefault();
+    setState('LOADING');
+    setMessage(null);
 
-    const res = await fetch('/api/subscribe', {
-      body: JSON.stringify({
-        email: inputRef.current.value,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      method: 'POST',
-    });
+    try {
+      const res = await fetch('/api/subscribe', {
+        body: JSON.stringify({
+          email: inputRef.current.value,
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        method: 'POST',
+      });
 
-    const { error } = await res.json();
+      const { error } = await res.json();
 
-    if (error) {
+      if (error) {
+        setMessage(error);
+        setState('ERROR');
+        return;
+      }
+      inputRef.current.value = '';
+      setMessage('Success! 🎉 You are now subscribed to the newsletter.');
+      setState('SUCCESS');
+      return;
+    } catch (err) {
       setMessage(error);
-
+      setState('ERROR');
       return;
     }
-    inputRef.current.value = '';
-    setMessage('Success! 🎉 You are now subscribed to the newsletter.');
   };
 
   return (
-    <div className="h-[15rem] xs:h-[13rem] sm:h-[11rem] w-full bg-zinc-900/90 px-2">
+    <div className="h-[15rem] xs:h-[13.5rem] xsm:h-[12.5rem] sm:h-[13rem] md:min-w-[400px]  w-full bg-black/90 px-2">
       <div className="flex justify-center items-center">
         <h1 className="text-center text-zinc-300 text-lg md:text-2xl">
           Sign up to the Newsletter...
@@ -46,17 +59,59 @@ export default function Contact() {
             required
             autoCapitalize="off"
             autoCorrect="off"
-            className="border border-black/60 rounded-xl w-full md:min-w-[400px] py-2 text-center text-md px-2"
+            className="h-[40px] min-w-[400px] border border-black/60 rounded-xl w-full text-center text-md px-2"
           />
-          <div className="flex justify-center items-center">
-            <button
-              type="submit"
+          <div className="flex justify-center items-center pt-2">
+            {/* <button
+              type="button"
               value=""
               name="subscribe"
-              className="px-12 py-1 mt-2 text-lg border border-black/60 rounded-xl bg-gray-200 text-gray-900 transition-colors duration-700 transform hover:bg-gray-500 hover:text-gray-100"
+              disabled={state === 'LOADING'}
+              // onClick={subscribe}
+              onClick={() => {
+                setLoading(!loading);
+              }}
+              className={`w-[200px] h-[40px] px-12 mt-2 text-lg border border-black/60 rounded-xl bg-gray-200 text-gray-900 transition-colors duration-700 transform hover:bg-gray-500 hover:text-gray-100 ${
+                state === 'LOADING' ? 'button-gradient-loading' : ''
+              }`}
             >
+              {' '}
               Subscribe
-            </button>
+              {/* {state === 'IDLE' && 'Subscribe'}
+              {state === 'LOADING' && (
+                <div className="flex justify-center items-center">
+                  <LoadingSpinner />
+                </div>
+              )} 
+            </button> */}
+
+            {loading ? (
+              <button
+                type="submit"
+                value=""
+                name="subscribe"
+                onClick={() => {
+                  setState('LOADING');
+                }}
+                className="w-[200px] h-[40px] px-12 mt-2 text-lg border border-black/60 rounded-xl bg-gray-200 text-gray-900 transition-colors duration-700 transform hover:bg-gray-500 hover:text-gray-100"
+              >
+                Subscribe
+              </button>
+            ) : (
+              state === 'LOADING' && (
+                <button
+                  type="submit"
+                  value=""
+                  disabled
+                  name="subscribe"
+                  className="w-[200px] h-[40px] px-12 mt-2 text-lg border border-black/60 rounded-xl bg-gray-200 text-gray-900 transition-colors duration-700 transform hover:bg-gray-500 hover:text-gray-100"
+                >
+                  <div className="flex justify-center items-center">
+                    <LoadingSpinner />
+                  </div>
+                </button>
+              )
+            )}
           </div>
           <div className="pt-2 text-zinc-300 text-sm md:text-lg text-center">
             {message

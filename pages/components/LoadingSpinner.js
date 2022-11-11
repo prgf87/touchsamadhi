@@ -1,10 +1,10 @@
 import React from 'react';
-import Image from 'next/image';
+import { AiOutlineLoading } from 'react-icons/ai';
 
 function LoadingSpinner() {
   return (
     <div>
-      <Image src={'/loading.png'} alt="loading..." className="animate-spin" />
+      <AiOutlineLoading size={20} className="animate-spin" />
     </div>
   );
 }

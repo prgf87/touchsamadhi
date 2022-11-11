@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react';
 import Head from 'next/head';
 import Navbar from './components/Navbar.js';
 import About from './components/About.js';
@@ -5,7 +6,6 @@ import Contact from './components/Contact.js';
 import Footer from './components/Footer.js';
 import Hero from './components/Hero.js';
 import Listen from './components/Listen.js';
-import { Suspense } from 'react';
 import LoadingSpinner from './components/LoadingSpinner.js';
 
 export default function Home() {
@@ -22,7 +22,6 @@ export default function Home() {
       <Suspense fallback={<LoadingSpinner />}>
         <Navbar />
         <Hero />
-        {/* <Listen /> */}
         <About />
         <Listen />
         <Contact />

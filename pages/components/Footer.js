@@ -1,9 +1,11 @@
 import React from 'react';
 import { BsFacebook, BsInstagram, BsYoutube } from 'react-icons/bs';
 import { FaBandcamp } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const footer = `Copyright © ${currentYear} T.O.U.C.H. Samadhi`;
 
   return (
     <div className="h-[5rem] bg-black/90 w-full flex justify-center items-center my-1">
@@ -29,7 +31,11 @@ const Footer = () => {
       </div>
       <div className="mx-10">
         <h1 className="text-white text-sm text-center">
-          Copyright © {currentYear} T.O.U.C.H. Samadhi
+          <div>
+            <Link href={'/'} className="button btn">
+              {footer}
+            </Link>
+          </div>
         </h1>
       </div>
       <div className="relative bottom-0 right-7 flex">
