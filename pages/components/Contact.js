@@ -44,7 +44,7 @@ export default function Contact() {
   return (
     <div className="h-[15rem] xs:h-[13.5rem] xsm:h-[12.5rem] sm:h-[13rem] md:min-w-[400px]  w-full bg-black/90 px-2">
       <div className="flex justify-center items-center">
-        <h1 className="text-center text-zinc-300 text-lg md:text-2xl">
+        <h1 className="text-center text-zinc-300 text-lg md:text-2xl mt-4">
           Sign up to the Newsletter...
         </h1>
       </div>
@@ -61,7 +61,7 @@ export default function Contact() {
             autoCorrect="off"
             className="h-[40px] min-w-[400px] border border-black/60 rounded-xl w-full text-center text-md px-2"
           />
-          <div className="flex justify-center items-center pt-2">
+          <div className="flex justify-center items-center py-4">
             {/* <button
               type="button"
               value=""
@@ -113,7 +113,7 @@ export default function Contact() {
               )
             )}
           </div>
-          <div className="pt-2 text-zinc-300 text-sm md:text-lg text-center">
+          <div className="text-zinc-300 text-sm md:text-lg text-center">
             {message
               ? message
               : `We only send emails when we have genuine news.`}
