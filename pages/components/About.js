@@ -6,12 +6,12 @@ const About = () => {
     <div id="about" className="w-full z-[2] bg-black/90">
       <div className="grid grid-cols-1 w-full text-center mx-auto px-10 text-sm md:text-xl p-2">
         <div>
-          <p className="pt-2 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-zinc-200/50">
-            <u className="font-bold text-3xl md:text-5xl">
+          <p className="pt-2 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-zinc-200/50 mt-6 mb-4">
+            <u className="font-bold text-xl md:text-4xl">
               Awaken To The Trance Dance Experience
             </u>
           </p>
-          <div className="text-[1.6rem] leading-8">
+          <div className="max-w-[60ch] md:text-[0.9rem] lg:text-[1.3rem] md:leading-8 mx-auto">
             <p>
               …pioneering a revolutionary understanding of the nature of
               consciousness…

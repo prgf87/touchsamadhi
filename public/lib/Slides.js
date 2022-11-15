@@ -5,11 +5,11 @@ export const slides = [
   },
   {
     image: '/images/ts2.jpg',
-    position: '40% 50%',
+    position: '50% 50%',
   },
   {
     image: '/images/ts3.jpg',
-    position: '45% 50%',
+    position: '50% 50%',
   },
   {
     image: '/images/ts4.jpg',
@@ -17,10 +17,10 @@ export const slides = [
   },
   {
     image: '/images/ts5.jpg',
-    position: '45% 50%',
+    position: '50% 50%',
   },
   {
     image: '/images/ts6.jpg',
-    position: '40% 50%',
+    position: '50% 50%',
   },
 ];

@@ -19,24 +19,26 @@ export default function handler(req, res) {
     });
 
     const run = async () => {
-      const update = await client.lists.addListMember(LIST_ID, {
-        email_address: email,
+      const response = await client.lists.addListMember(LIST_ID, {
+        email_address: `${email}`,
         status: 'pending',
         skip_merge_validation: true,
       });
-
-      if (update.status >= 400) {
-        return res.status(400).json({
-          error: `There was an error subscribing your email address to the newsletter.
-          Please contact us directly at touchsamadhi@gmail.com so we can add you in manually. Sorry for any inconvenience.`,
-        });
-      }
+      console.log(response);
     };
     run();
-    return res.status(201).json({
-      error: 'Please check your emails and verify your subcription',
-    });
+    if (response.status >= 400) {
+      return res.status(400).json({
+        error: `There was an error subscribing your email address to the newsletter.
+        Please contact us directly so we can add you in manually. Sorry for any inconvenience.`,
+      });
+    } else {
+      return res.status(201).json({
+        error: 'Success! 🎉 You are now subscribed to the newsletter.',
+      });
+    }
   } catch (error) {
-    return res.status(500).json({ error: error.message || error.toString() });
+    console.log(error);
+    return res.status(500).json({ error: '***ERROR***' });
   }
 }
