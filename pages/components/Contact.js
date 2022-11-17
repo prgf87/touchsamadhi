@@ -5,7 +5,6 @@ import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 export default function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  // const [loading, setLoading] = useState(true);
   const [state, setState] = useState('IDLE');
 
   const subscribe = async (e) => {
@@ -23,11 +22,12 @@ export default function Contact() {
         },
         method: 'POST',
       });
-      console.log(res);
 
       if (res.status >= 400) {
         console.log(res.error);
         setState('ERROR');
+        setEmail('');
+
         setMessage(
           <div>
             An error has occurred, please{' '}
@@ -39,40 +39,54 @@ export default function Contact() {
               onClick={() => {
                 setState('IDLE');
                 setMessage(null);
-                setEmail('');
               }}
             >
               contact us
             </a>
           </div>
         );
-        setEmail('');
         setTimeout(() => {
           setState('IDLE');
           setMessage(null);
+          return;
         }, 10000);
-        return;
       }
 
       setState('SUCCESS');
       setMessage('Success! 🎉 You are now subscribed to the newsletter.');
       setEmail('');
+
       setTimeout(() => {
         setState('IDLE');
         setMessage(null);
+        return;
       }, 10000);
-
-      return;
     } catch (e) {
       setState('ERROR');
       console.log(e.res.error);
-      setMessage(e.res.error);
       setEmail('');
+      setMessage(
+        <div>
+          An error has occurred, please{' '}
+          <a
+            href="https://www.facebook.com/touchsamadhi"
+            target="_blank"
+            rel="noreferrer"
+            className="text-blue-500 underline cursor-pointer transition-transform duration-7000 hover:text-gray-200"
+            onClick={() => {
+              setState('IDLE');
+              setMessage(null);
+            }}
+          >
+            contact us
+          </a>
+        </div>
+      );
       setTimeout(() => {
         setState('IDLE');
         setMessage(null);
+        return;
       }, 10000);
-      return;
     }
   };
 
@@ -80,7 +94,7 @@ export default function Contact() {
     <div className="h-[15rem] xs:h-[13.5rem] xsm:h-[12.5rem] sm:h-[13rem] w-full bg-black/90 px-2">
       <div className="flex justify-center items-center">
         <h1 className="text-center text-zinc-300 text-lg md:text-2xl mt-4">
-          Sign up to the Newsletter...
+          Sign up to the Newsletter
         </h1>
       </div>
       <div className="flex justify-center items-center w-full">
@@ -129,13 +143,12 @@ export default function Contact() {
               <div className="h-[50px]">
                 <CountdownCircleTimer
                   isPlaying
-                  size={50}
+                  size={55}
+                  strokeWidth={2}
                   duration={10}
-                  colors={[
-                    ['#004777', 0.33],
-                    ['#F7B801', 0.33],
-                    ['#A30000', 0.33],
-                  ]}
+                  trailColor="#3399ff"
+                  rotation="clockwise"
+                  colors="#ffffff"
                 >
                   {({ remainingTime }) => remainingTime}
                 </CountdownCircleTimer>
