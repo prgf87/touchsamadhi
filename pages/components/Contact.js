@@ -8,9 +8,9 @@ export default function Contact() {
   const [state, setState] = useState('IDLE');
 
   const subscribe = async (e) => {
-    e.preventDefault();
-    setState('LOADING');
-    setMessage(null);
+    // e.preventDefault();
+    // setState('LOADING');
+    // setMessage(null);
 
     try {
       const res = await fetch('/api/subscribe', {
@@ -22,74 +22,81 @@ export default function Contact() {
         },
         method: 'POST',
       });
-
-      if (res.status >= 400) {
-        console.log(res.error);
-        setState('ERROR');
-        setEmail('');
-
-        setMessage(
-          <div>
-            An error has occurred, please{' '}
-            <a
-              href="https://www.facebook.com/touchsamadhi"
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue-500 underline cursor-pointer transition-transform duration-7000 hover:text-gray-200"
-              onClick={() => {
-                setState('IDLE');
-                setMessage(null);
-              }}
-            >
-              contact us
-            </a>
-          </div>
-        );
-        setTimeout(() => {
-          setState('IDLE');
-          setMessage(null);
-          return;
-        }, 10000);
-      }
-
-      setState('SUCCESS');
-      setMessage('Success! 🎉 You are now subscribed to the newsletter.');
-      setEmail('');
-
-      setTimeout(() => {
-        setState('IDLE');
-        setMessage(null);
-        return;
-      }, 10000);
-    } catch (e) {
-      setState('ERROR');
-      console.log(e.res.error);
-      setEmail('');
-      setMessage(
-        <div>
-          An error has occurred, please{' '}
-          <a
-            href="https://www.facebook.com/touchsamadhi"
-            target="_blank"
-            rel="noreferrer"
-            className="text-blue-500 underline cursor-pointer transition-transform duration-7000 hover:text-gray-200"
-            onClick={() => {
-              setState('IDLE');
-              setMessage(null);
-            }}
-          >
-            contact us
-          </a>
-        </div>
-      );
-      setTimeout(() => {
-        setState('IDLE');
-        setMessage(null);
-        return;
-      }, 10000);
+      await console.log('***API RES****: ', res);
+    } catch (err) {
+      await console.log('****API ERROR****');
+      return;
     }
+    await console.log('***API SUCCESS***');
+    return;
   };
 
+  // } catch (err) {
+  //   console.error(err);
+  // }
+  //   if (res.status >= 400) {
+  //     console.log('error: ', res.statusText);
+  //     setState('ERROR');
+  //     setEmail('');
+  //     setMessage(
+  //       <div>
+  //         An error has occurred, please{' '}
+  //         <a
+  //           href="https://www.facebook.com/touchsamadhi"
+  //           target="_blank"
+  //           rel="noreferrer"
+  //           className="text-blue-500 underline cursor-pointer transition-transform duration-7000 hover:text-gray-200"
+  //           onClick={() => {
+  //             setState('IDLE');
+  //             setMessage(null);
+  //           }}
+  //         >
+  //           contact us
+  //         </a>
+  //       </div>
+  //     );
+  //     setTimeout(() => {
+  //       setState('IDLE');
+  //       setMessage(null);
+  //       return;
+  //     }, 10000);
+
+  //     setState('SUCCESS');
+  //     setMessage('Success! 🎉 You are now subscribed to the newsletter.');
+  //     setEmail('');
+
+  //     setTimeout(() => {
+  //       setState('IDLE');
+  //       setMessage(null);
+  //       return;
+  //     }, 10000);
+  //   }
+  //   setState('ERROR');
+  //   console.log(e.res.error);
+  //   setEmail('');
+  //   setMessage(
+  //     <div>
+  //       An error has occurred, please{' '}
+  //       <a
+  //         href="https://www.facebook.com/touchsamadhi"
+  //         target="_blank"
+  //         rel="noreferrer"
+  //         className="text-blue-500 underline cursor-pointer transition-transform duration-7000 hover:text-gray-200"
+  //         onClick={() => {
+  //           setState('IDLE');
+  //           setMessage(null);
+  //         }}
+  //       >
+  //         contact us
+  //       </a>
+  //     </div>
+  //   );
+  //   setTimeout(() => {
+  //     setState('IDLE');
+  //     setMessage(null);
+  //     return;
+  //   }, 10000);
+  // };
   return (
     <div className="h-[15rem] xs:h-[13.5rem] xsm:h-[12.5rem] sm:h-[13rem] w-full bg-black/90 px-2">
       <div className="flex justify-center items-center">
@@ -170,6 +177,7 @@ export default function Contact() {
             )}
           </div>
           <div className="text-zinc-300 text-sm md:text-lg text-center md:min-w-[35ch]">
+            {/* {console.log('message: ', message)} */}
             {message
               ? message
               : `We only send emails when we have genuine news.`}
