@@ -9,61 +9,33 @@ export default function Contact() {
 
   const subscribe = async (e) => {
     e.preventDefault();
-    setState('LOADING');
     setMessage(null);
+    setState('LOADING');
+    // try {
+    const res = await fetch('/api/subscribe', {
+      body: JSON.stringify({
+        email: email,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+    });
+    const response = await res.json();
+    console.log(response);
+    console.log(response.status);
+    setState('SUCCESS');
+    setMessage('Success! 🎉 You are now subscribed to the newsletter.');
+    setEmail('');
 
-    try {
-      const res = await fetch('/api/subscribe', {
-        body: JSON.stringify({
-          email: email,
-        }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        method: 'POST',
-      });
-
-      if (res.status >= 400) {
-        console.log(res.error);
-        setState('ERROR');
-        setEmail('');
-
-        setMessage(
-          <div>
-            An error has occurred, please{' '}
-            <a
-              href="https://www.facebook.com/touchsamadhi"
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue-500 underline cursor-pointer transition-transform duration-7000 hover:text-gray-200"
-              onClick={() => {
-                setState('IDLE');
-                setMessage(null);
-              }}
-            >
-              contact us
-            </a>
-          </div>
-        );
-        setTimeout(() => {
-          setState('IDLE');
-          setMessage(null);
-          return;
-        }, 10000);
-      }
-
-      setState('SUCCESS');
-      setMessage('Success! 🎉 You are now subscribed to the newsletter.');
-      setEmail('');
-
-      setTimeout(() => {
-        setState('IDLE');
-        setMessage(null);
-        return;
-      }, 10000);
-    } catch (e) {
+    setTimeout(() => {
+      setState('IDLE');
+      setMessage(null);
+      return;
+    }, 10000);
+    if (response.status >= 400) {
+      console.log('error: ', response.error);
       setState('ERROR');
-      console.log(e.res.error);
       setEmail('');
       setMessage(
         <div>
@@ -82,6 +54,7 @@ export default function Contact() {
           </a>
         </div>
       );
+
       setTimeout(() => {
         setState('IDLE');
         setMessage(null);
@@ -170,9 +143,7 @@ export default function Contact() {
             )}
           </div>
           <div className="text-zinc-300 text-sm md:text-lg text-center md:min-w-[35ch]">
-            {message
-              ? message
-              : `We only send emails when we have genuine news.`}
+            {message ? message : `Keep up to date with all the latest news`}
           </div>
         </form>
       </div>

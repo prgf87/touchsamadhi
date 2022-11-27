@@ -11,7 +11,7 @@ const About = () => {
               Awaken To The Trance Dance Experience
             </u>
           </p>
-          <div className="max-w-[60ch] md:text-[0.9rem] lg:text-[1.3rem] md:leading-8 mx-auto">
+          <div className="max-w-[60ch] md:text-[1.05rem] lg:text-[1.3rem] md:leading-8 mx-auto">
             <p>
               …pioneering a revolutionary understanding of the nature of
               consciousness…
