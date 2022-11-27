@@ -37,7 +37,7 @@ button {
 }
 
 button.btn {
-  @apply border border-black/60 bg-gray-400/80 text-gray-900 transition-colors duration-700 transform hover:bg-gray-800 hover:text-gray-300;
+  @apply border border-black/20 bg-gray-600/80 text-gray-300 transition-colors duration-700 transform hover:bg-gray-800 hover:text-gray-200;
 }
 
 .button-gradient-loading {
