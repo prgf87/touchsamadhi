@@ -11,7 +11,7 @@ export default function Contact() {
     e.preventDefault();
     setMessage(null);
     setState('LOADING');
-    // try {
+
     const res = await fetch('/api/subscribe', {
       body: JSON.stringify({
         email: email,
