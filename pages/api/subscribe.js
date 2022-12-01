@@ -18,19 +18,13 @@ const handler = async (req, res) => {
   });
 
   try {
-    const ping = await client.ping.get();
-    console.log(ping);
     const response = await client.lists.addListMember(LIST_ID, {
       email_address: email,
       status: 'pending',
       skip_merge_validation: true,
     });
-    console.log('***API CALL***');
-    console.log(response);
   } catch (err) {
     if (err.status >= 400) {
-      console.log('***RES ERROR***');
-      console.log('err.status: ', err.status);
       return res.status(400).json({
         status: 400,
         error: '***STATUS 400 ERROR***',
@@ -41,8 +35,7 @@ const handler = async (req, res) => {
       error: '***STATUS 500 ERROR***',
     });
   }
-  console.log('***SUCCESS***');
-  console.log('res: ', res);
+
   return res.status(201).json({
     status: 201,
     error: '',
