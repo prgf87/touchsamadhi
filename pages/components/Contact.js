@@ -22,8 +22,6 @@ export default function Contact() {
       method: 'POST',
     });
     const response = await res.json();
-    console.log(response);
-    console.log(response.status);
     setState('SUCCESS');
     setMessage('Success! 🎉 You are now subscribed to the newsletter.');
     setEmail('');
@@ -34,7 +32,6 @@ export default function Contact() {
       return;
     }, 10000);
     if (response.status >= 400) {
-      console.log('error: ', response.error);
       setState('ERROR');
       setEmail('');
       setMessage(
