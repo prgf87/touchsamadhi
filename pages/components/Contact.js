@@ -22,15 +22,6 @@ export default function Contact() {
       method: 'POST',
     });
     const response = await res.json();
-    setState('SUCCESS');
-    setMessage('Success! 🎉 You are now subscribed to the newsletter.');
-    setEmail('');
-
-    setTimeout(() => {
-      setState('IDLE');
-      setMessage(null);
-      return;
-    }, 10000);
     if (response.status >= 400) {
       setState('ERROR');
       setEmail('');
@@ -58,6 +49,15 @@ export default function Contact() {
         return;
       }, 10000);
     }
+    setState('SUCCESS');
+    setMessage('Success! 🎉 You are now subscribed to the newsletter.');
+    setEmail('');
+
+    setTimeout(() => {
+      setState('IDLE');
+      setMessage(null);
+      return;
+    }, 10000);
   };
 
   return (
@@ -88,7 +88,7 @@ export default function Contact() {
                 type="submit"
                 value=""
                 name="subscribe"
-                disabled={state === 'LOADING'}
+                disabled={state === 'LOADING' || state === 'ERROR'}
                 className="w-[200px] h-[40px] px-12 mt-2 text-lg border border-black/60 rounded-xl bg-gray-200 text-gray-900 transition-colors duration-700 transform hover:bg-gray-500 hover:text-gray-100"
               >
                 Subscribe
