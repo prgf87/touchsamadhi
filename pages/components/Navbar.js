@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function Navbar() {
   return (
-    <div className="absolute z-[4] top-0 left-0 right-0 bottom-0  h-[65px] md:h-[100px] text-center">
+    <div className="absolute z-[4] top-28 left-0 right-0 bottom-0  h-[65px] md:h-[100px] text-center">
       <div className="w-full cursor-context-menu ">
         <div className="pt-2 z-[4] opacity-60 h-[5rem]">
           <Image src="/tslogo2.png" alt="logo" width={150} height={150} />
