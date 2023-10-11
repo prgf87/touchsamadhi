@@ -47,3 +47,7 @@ button.btn {
 input {
   @apply text-gray-500 border p-2;
 }
+
+.newsletter-wrapper {
+  @apply min-h-[900px] xs:min-h-[800px] sm:min-h-[700px] xl:min-h-[600px] w-full overflow-visible;
+}

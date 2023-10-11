@@ -10,27 +10,29 @@ function About() {
           </u>
         </h2>
 
-        <p className="lg:text-xl xl:pl-80">
-          pioneering a revolutionary understanding of the nature of
-          consciousness <br />
-          ...striving to discover who we are beyond our thoughts, emotions,
-          memories, associations, and perceptions… <br />
-          Samadhi is said to be a fourth kind of consciousness: <br />
-          It is beyond the states of waking, dreaming and dreamless sleep.
-          <br />
-          Those who have witnessed it as an external phenomenon report that the
-          experience appeared to have fallen into a kind of trance.
-          <br />
-          The hair on the head and body stood erect. The half-closed eyes became
-          fixed. Sometimes there was an astonishing loss of weight, or even
-          levitation of the body from the ground. <br />
-          But these are mere symptoms, and tell us nothing.. There is only one
-          way to find out what samadhi is like: You must have it yourself…
-        </p>
+        <div className="max-w-5xl ml-auto">
+          <p className="lg:text-xl ">
+            pioneering a revolutionary understanding of the nature of
+            consciousness <br />
+            ...striving to discover who we are beyond our thoughts, emotions,
+            memories, associations, and perceptions… <br />
+            Samadhi is said to be a fourth kind of consciousness: <br />
+            It is beyond the states of waking, dreaming and dreamless sleep.
+            <br />
+            Those who have witnessed it as an external phenomenon report that
+            the experience appeared to have fallen into a kind of trance.
+            <br />
+            The hair on the head and body stood erect. The half-closed eyes
+            became fixed. Sometimes there was an astonishing loss of weight, or
+            even levitation of the body from the ground. <br />
+            But these are mere symptoms, and tell us nothing.. There is only one
+            way to find out what samadhi is like: You must have it yourself…
+          </p>
 
-        <p className="text-lg md:text-2xl pt-2">
-          Asheville, North Carolina<br></br> U.S.A
-        </p>
+          <p className="text-lg md:text-2xl pt-2">
+            Asheville, North Carolina<br></br> U.S.A
+          </p>
+        </div>
       </div>
     </div>
   );
