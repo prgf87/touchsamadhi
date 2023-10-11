@@ -12,6 +12,7 @@
     "@mailchimp/mailchimp_marketing": "^3.0.80",
     "add": "^2.0.6",
     "formidable": "^3.2.5",
+    "lucide-react": "^0.285.0",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-countdown-circle-timer": "^3.0.9",

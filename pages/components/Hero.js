@@ -19,7 +19,7 @@ const Hero = () => {
   }, [current]);
 
   return (
-    <div className="relative flex justify-center items-top text-center h-screen bg-center body">
+    <div className="relative flex justify-center items-top text-center h-[32vh] bg-center body">
       <Image
         src={slides[current].image}
         objectPosition={slides[current].position}
@@ -31,15 +31,15 @@ const Hero = () => {
         priority="true"
       />
 
-      <div className="absolute top-0 left-0 bottom-0 right-0 h-screen bg-black/70 z-[2]" />
+      <div className="absolute top-0 left-0 bottom-0 right-0 h-full bg-black/80 z-[2]" />
 
-      <div className="absolute bottom-[5%] w-full flex justify-center items-center ">
+      {/* <div className="absolute bottom-[5%] w-full flex justify-center items-center ">
         <Link href={'https://www.eqfest.com'}>
           <button className="button btn px-12 py-2 text-2xl z-[2]">
             Equinox
           </button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };
