@@ -6,7 +6,7 @@ import { LucideSquareDot } from 'lucide-react';
 const Banner = () => {
   return (
     <div className="bg-transparent text-gray-400 p-2">
-      <div className="bg-transparent flex justify-evenly items-center sm:grid-cols-5 text-center px-40">
+      <div className="bg-transparent flex justify-evenly items-center sm:grid-cols-5 text-center sm:px-40">
         <a
           href="https://touch-samadhi.square.site/"
           className="cursor-pointer"

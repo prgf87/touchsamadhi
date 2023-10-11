@@ -2,15 +2,15 @@ import React from 'react';
 
 function About() {
   return (
-    <div className="px-10 col-span-2">
+    <div className="px-2 lg:px-10 col-span-2">
       <div className="text-center lg:text-right">
         <h2 className="pt-2 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-zinc-200/50 mt-6 mb-4">
-          <u className="font-bold text-xl md:text-5xl text-center">
+          <u className="font-bold text-3xl md:text-5xl text-center">
             Awaken To The Trance Dance Experience
           </u>
         </h2>
 
-        <p className="text-xl pl-80">
+        <p className="lg:text-xl xl:pl-80">
           pioneering a revolutionary understanding of the nature of
           consciousness <br />
           ...striving to discover who we are beyond our thoughts, emotions,

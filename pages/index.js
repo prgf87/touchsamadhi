@@ -23,12 +23,11 @@ export default function Home() {
         <Banner />
         <Navbar />
         <Hero />
-        <section className="grid grid-cols-2 lg:grid-cols-3">
+        <section className="grid grid-cols-1 lg:grid-cols-3">
           <About />
           <BrevoContact />
         </section>
-
-        {/* <Contact /> */}
+        <Banner />
         <Footer />
       </Suspense>
     </div>
