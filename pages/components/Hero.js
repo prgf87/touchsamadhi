@@ -19,7 +19,7 @@ const Hero = () => {
   }, [current]);
 
   return (
-    <div className="relative flex justify-center items-top text-center h-[30vh] bg-center body">
+    <div className="relative flex justify-center items-top text-center h-[27vh] bg-center body">
       <Image
         src={slides[current].image}
         objectPosition={slides[current].position}
@@ -31,7 +31,7 @@ const Hero = () => {
         priority="true"
       />
 
-      <div className="absolute top-0 left-0 bottom-0 right-0 h-full bg-black/70 z-[2]" />
+      <div className="absolute top-0 left-0 bottom-0 right-0 h-full bg-black/80 z-[2]" />
 
       {/* <div className="absolute bottom-[5%] w-full flex justify-center items-center ">
         <Link href={'https://www.eqfest.com'}>
