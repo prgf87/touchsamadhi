@@ -7,7 +7,7 @@ import Image from "next/legacy/image";
 const Banner = () => {
   return (
     <div className="bg-transparent text-gray-400 p-2">
-      <div className="bg-transparent flex justify-evenly items-center sm:grid-cols-5 text-center sm:px-40">
+      <div className="bg-transparent flex justify-evenly items-center sm:grid-cols-5 text-center sm:px-40 py-2">
         <a
           href="https://www.bonfire.com/store/touch-samadhi/"
           className="cursor-pointer"
