@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { slides } from "../public/lib/Slides";
 
 const Hero = () => {
@@ -24,12 +24,9 @@ const Hero = () => {
         src={slides[current].image}
         objectPosition={slides[current].position}
         alt="/"
-        // placeholder="blur"
-        // blurDataURL={slides[current]}
-        className="object-cover max-h-[400px]"
-        // layout={"fill"}
-        width={1920}
-        height={1080}
+        placeholder="blur"
+        blurDataURL={slides[current]}
+        layout={"fill"}
         objectFit={"cover"}
         priority="true"
       />

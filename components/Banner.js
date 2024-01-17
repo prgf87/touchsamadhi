@@ -2,7 +2,7 @@ import React from "react";
 import { ImSoundcloud, ImYoutube } from "react-icons/im";
 import { SiBandcamp } from "react-icons/si";
 import { LucideSquareDot } from "lucide-react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const Banner = () => {
   return (
