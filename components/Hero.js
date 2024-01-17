@@ -19,7 +19,7 @@ const Hero = () => {
   }, [current]);
 
   return (
-    <div className="relative flex justify-center items-top text-center min-h-[36vh] bg-center body">
+    <div className="relative flex justify-center items-top text-center min-h-[48vh] bg-center body">
       <Image
         src={slides[current].image}
         objectPosition={slides[current].position}
