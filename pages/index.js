@@ -1,12 +1,12 @@
-import React, { Suspense } from 'react';
-import Head from 'next/head';
-import Navbar from './components/Navbar.js';
-import Footer from './components/Footer.js';
-import Hero from './components/Hero.js';
-import Banner from './components/Banner.js';
-import LoadingSpinner from './components/LoadingSpinner.js';
-import BrevoContact from './components/BrevoContact.js';
-import About from './components/About.js';
+import React, { Suspense } from "react";
+import Head from "next/head";
+import Navbar from "../components/Navbar.js";
+import Footer from "../components/Footer.js";
+import Hero from "../components/Hero.js";
+import Banner from "../components/Banner.js";
+import LoadingSpinner from "../components/LoadingSpinner.js";
+import BrevoContact from "../components/BrevoContact.js";
+import About from "../components/About.js";
 
 export default function Home() {
   return (

@@ -1,11 +1,11 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/legacy/image";
 
 function Navbar() {
   return (
-    <div className="absolute z-[4] top-28 left-0 right-0 bottom-0  h-[65px] md:h-[100px] text-center">
+    <div className="absolute z-[4] top-36 left-0 right-0 bottom-0  min-h-[65px] md:min-h-[100px] text-center ">
       <div className="w-full cursor-context-menu ">
-        <div className="pt-2 z-[4] opacity-60 h-[5rem]">
+        <div className="pt-4 z-[4] opacity-60 h-[5rem] flex justify-center items-center">
           <Image src="/tslogo2.png" alt="logo" width={150} height={150} />
         </div>
         <div className="my-12">

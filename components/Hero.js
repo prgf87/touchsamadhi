@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { slides } from '../../public/lib/Slides';
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import Image from "next/legacy/image";
+import { slides } from "../public/lib/Slides";
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
@@ -19,15 +19,15 @@ const Hero = () => {
   }, [current]);
 
   return (
-    <div className="relative flex justify-center items-top text-center h-[32vh] bg-center body">
+    <div className="relative flex justify-center items-top text-center min-h-[36vh] bg-center body">
       <Image
         src={slides[current].image}
         objectPosition={slides[current].position}
         alt="/"
         placeholder="blur"
         blurDataURL={slides[current]}
-        layout={'fill'}
-        objectFit={'cover'}
+        layout={"fill"}
+        objectFit={"cover"}
         priority="true"
       />
 
