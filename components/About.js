@@ -3,7 +3,7 @@ import React from "react";
 
 function About() {
   return (
-    <div className="w-screen px-2 lg:px-10 col-span-2 pb-20 border-b">
+    <div className="w-screen lg:px-10 col-span-2 pb-20 border-b">
       <div className="w-[80vw] text-center lg:text-left">
         {/* <div className="pt-20 pb-8 z-[4] opacity-60 h-[5rem] flex justify-center items-center">
           <Image src="/tslogo2.png" alt="logo" width={150} height={150} />
