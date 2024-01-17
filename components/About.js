@@ -55,7 +55,7 @@ function About() {
           </div>
 
           <h2 className="text-lg md:text-2xl pt-2">
-            Asheville, North Carolina - U.S.A
+            Asheville, North Carolina <br /> U.S.A
           </h2>
         </div>
       </div>
