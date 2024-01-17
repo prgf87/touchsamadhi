@@ -1,21 +1,30 @@
-import React from 'react';
-import { ImSoundcloud, ImYoutube } from 'react-icons/im';
-import { SiBandcamp } from 'react-icons/si';
-import { LucideSquareDot } from 'lucide-react';
+import React from "react";
+import { ImSoundcloud, ImYoutube } from "react-icons/im";
+import { SiBandcamp } from "react-icons/si";
+import { LucideSquareDot } from "lucide-react";
+import Image from "next/image";
 
 const Banner = () => {
   return (
     <div className="bg-transparent text-gray-400 p-2">
       <div className="bg-transparent flex justify-evenly items-center sm:grid-cols-5 text-center sm:px-40">
         <a
-          href="https://touch-samadhi.square.site/"
+          href="https://www.bonfire.com/store/touch-samadhi/"
           className="cursor-pointer"
           target="_blank"
           rel="noopener noreferrer"
         >
           <button className="hover:text-gray-500">
-            <LucideSquareDot size={50} className="mx-auto" />
-            <div className="text-xs lg:text-lg">Square</div>
+            <Image
+              src="/bonfire-logo.png"
+              alt="Bonfire Logo and link to Merchandising Shop"
+              // width={50}
+              width="44"
+              height="44"
+              className="hover:brightness-50 mx-auto"
+            />
+            {/* <LucideSquareDot size={50} className="mx-auto" /> */}
+            <div className="text-xs lg:text-lg">Bonfire</div>
           </button>
         </a>
         <a

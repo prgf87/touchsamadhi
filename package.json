@@ -9,17 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mailchimp/mailchimp_marketing": "^3.0.80",
     "add": "^2.0.6",
     "formidable": "^3.2.5",
     "lucide-react": "^0.285.0",
-    "next": "12.3.1",
+    "next": "^14.0.4",
     "react": "18.2.0",
     "react-countdown-circle-timer": "^3.0.9",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
     "react-player": "^2.11.0",
-    "sharp": "^0.31.2"
+    "sharp": "^0.33.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
