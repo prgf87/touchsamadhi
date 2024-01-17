@@ -26,7 +26,10 @@ const Hero = () => {
         alt="/"
         // placeholder="blur"
         // blurDataURL={slides[current]}
-        layout={"fill"}
+        className="object-cover max-h-[400px]"
+        // layout={"fill"}
+        width={1920}
+        height={1080}
         objectFit={"cover"}
         priority="true"
       />

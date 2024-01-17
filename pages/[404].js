@@ -22,7 +22,7 @@ function ErrorPage() {
           <button>Go Home</button>
         </Link> */}
       </div>
-      <Banner />
+      {/* <Banner /> */}
       <Footer />
     </Suspense>
   );
