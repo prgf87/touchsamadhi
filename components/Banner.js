@@ -28,7 +28,7 @@ const Banner = () => {
           </button>
         </a>
         <a
-          href="https://beatspace-touchsamadhi.bandcamp.com/"
+          href="https://touchsamadhi.bandcamp.com"
           className="cursor-pointer"
           target="_blank"
           rel="noopener noreferrer"
