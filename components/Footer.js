@@ -1,7 +1,7 @@
-import React from 'react';
-import { BsFacebook, BsInstagram, BsYoutube } from 'react-icons/bs';
-import { FaBandcamp } from 'react-icons/fa';
-import Link from 'next/link';
+import React from "react";
+import { BsFacebook, BsInstagram, BsYoutube } from "react-icons/bs";
+import { FaBandcamp } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -32,7 +32,7 @@ const Footer = () => {
       <div className="mx-10">
         <h1 className="text-white text-sm text-center">
           <div>
-            <Link href={'/'} className="button btn">
+            <Link href={"/"} className="button btn">
               {footer}
             </Link>
           </div>
@@ -40,7 +40,7 @@ const Footer = () => {
       </div>
       <div className="relative bottom-0 right-7 flex">
         <a
-          href="https://beatspace-touchsamadhi.bandcamp.com/"
+          href="https://touchsamadhi.bandcamp.com"
           target="_blank"
           rel="noreferrer"
         >
