@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Image from 'next/legacy/image';
 import { slides } from '../public/lib/Slides';
 
@@ -32,10 +32,10 @@ const Hero = () => {
     return null;
   }
 
-  var nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setSlideDirection('right');
     setCurrent(getNextIndex());
-  };
+  });
 
   const getPrevIndex = () => (current === 0 ? slides.length - 1 : current - 1);
   const getNextIndex = () => (current === slides.length - 1 ? 0 : current + 1);
