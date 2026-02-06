@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import { slides } from '../public/lib/Slides';
 
 const Hero = () => {
@@ -57,13 +57,11 @@ const Hero = () => {
               >
                 <Image
                   src={slides[index].image}
-                  objectPosition={slides[current].position}
                   alt={`slider image - ${slides[index].image}`}
-                  placeholder="blur"
-                  blurDataURL={slides[current]}
-                  layout={'fill'}
-                  objectFit={'cover'}
-                  priority="true"
+                  fill
+                  priority
+                  sizes="100vw"
+                  style={{ objectFit: 'cover', objectPosition: slides[current].position }}
                   className={`w-full object-cover bg-center`}
                 />
                 <div className="absolute top-0 left-0 bottom-0 right-0 h-full bg-black/75 z-[2]" />

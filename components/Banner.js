@@ -2,11 +2,11 @@ import React from "react";
 import { ImSoundcloud, ImYoutube } from "react-icons/im";
 import { SiBandcamp } from "react-icons/si";
 import { LucideSquareDot } from "lucide-react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="bg-transparent text-gray-400 p-2">
+    <div className="bg-transparent text-gray-400 pt-8 w-full">
       <div className="bg-transparent flex justify-evenly items-center sm:grid-cols-5 text-center sm:px-40 py-2">
         <a
           href="https://www.bonfire.com/store/touch-samadhi/"

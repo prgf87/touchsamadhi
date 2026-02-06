@@ -30,7 +30,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="mx-10">
-        <h1 className="text-white text-sm text-center">
+        <h1 className="text-white text-lg text-center">
           <div>
             <Link href={"/"} className="button btn">
               {footer}
